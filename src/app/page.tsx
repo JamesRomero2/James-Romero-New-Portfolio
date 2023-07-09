@@ -1,11 +1,9 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { lazy } from "react";
 
-const ModelContainer = dynamic(() => import('../components/Model'), {
-  ssr: false,
-  loading: () => <p className="text-center flex items-center justify-center h-full"></p>
-})
+const ModelContainer = lazy(() => import('@/components/Model'))
 const SocialMedia = dynamic(() => import('@/components/SocialMediaButtons'))
 const ShowOnFrame = dynamic(() => import('@/components/AnimateVisible'))
 const CallToActionButton = dynamic(() => import('@/components/CTAButton'))

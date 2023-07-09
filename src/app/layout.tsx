@@ -4,7 +4,7 @@ import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: "James Romero",
-  description: "Web Portfolio for James Romero, made using Next.JS, Framer-Motion, MDX and TailwindCSS",
+  description: "Web Portfolio for James Romero, made using Next.JS, Framer-Motion, and TailwindCSS",
   icons: {
     icon: "/logo_16.ico",
     apple: "/logo_16.ico",
@@ -16,21 +16,21 @@ export const metadata: Metadata = {
   keywords: "web-portfolio, james romero, nextjs, tailwind, nextjs portfolio, blue portfolio",
   openGraph: {
       type: "website",
-      url: "https://example.com",
-      title: "James Romero | Aspiring Full Stack Web Developer",
-      description: "Hello ! Come and Visit my Personal Web Portfolio",
+      url: "https://www.jamesromero.tech/",
+      title: "James Romero | Aspiring Full Stack Developer",
+      description: "Heyyy 🤗 ! Come and Visit my new and latest Web Portfolio ! Also, Hire me as your Web Developer 🙏",
       siteName: "James Romero's Portfolio",
       images: [{
-        url: "https://example.com/og.png",
+        url: "https://www.jamesromero.tech",
       }],
   },
   twitter: { 
     card: "summary_large_image", 
-    site: "@site",
+    site: "@Blue_semicolon",
     title: "James Romero | Aspiring Full Stack Web Developer",
-    description: "Hello ! Come and Visit my Personal Web Portfolio",
-    creator: "@creator", 
-    images: "https://example.com/og.png" 
+    description: "Heyyy 🤗 ! Come and Visit my new and latest Web Portfolio ! Also, Hire me as your Web Developer 🙏",
+    creator: "@Blue_semicolon", 
+    images: "https://www.jamesromero.tech/twitterOG.png" 
   },
   robots: "index, follow"
 }
