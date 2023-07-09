@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from "next/image";
 
-const LoadingPage = () => {
+export default function Loading() {
   return (
     <div className="w-screen h-screen bg-accent flex items-center justify-center">
       <motion.div className="relative w-60 h-60 border-2 rounded-full bg-lightMdBG splashImage" animate={{
@@ -14,4 +14,3 @@ const LoadingPage = () => {
   )
 }
 
-export default LoadingPage

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { server } from '../config';
-import LoadingPage from "./loading";
+import Loading from "./loading";
 
 const ModelContainer = dynamic(() => import('../components/Model'), {
   ssr: false,
@@ -34,7 +34,7 @@ export default function Home() {
   }, [])
 
   if (loading) {
-    return <LoadingPage/>
+    return <Loading/>
   }
   
   return (
