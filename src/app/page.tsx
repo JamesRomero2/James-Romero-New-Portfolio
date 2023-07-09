@@ -86,9 +86,7 @@ export default function Home() {
           <p className="font-mont text-center text-lg sm:text-2xl">Connect with me !<br/>We can work it out soon !</p>
           </ShowOnFrame>
           <div className="flex justify-center items-center w-full">
-            <CallToActionButton>
-              <Link href={"mailto:romerojameslabr@gmail.com"} rel="noopener noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white block py-2 px-16 md:px-40">Say Hello !</Link>
-            </CallToActionButton>
+            <p className="text-xl text-center font-barl font-bold">📧 business.jamesromero@gmail.com</p>
           </div>
         </section>
       </main>

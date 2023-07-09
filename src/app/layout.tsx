@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       description: "Heyyy 🤗 ! Come and Visit my new and latest Web Portfolio ! Also, Hire me as your Web Developer 🙏",
       siteName: "James Romero's Portfolio",
       images: [{
-        url: "https://www.jamesromero.tech",
+        url: "https://www.jamesromero.tech/twitterOG.png",
       }],
   },
   twitter: { 
@@ -43,21 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {/* {
-          loading ? 
-          (
-            // Splash Screen
-            <div className="w-screen h-screen bg-accent flex items-center justify-center">
-              <motion.div className="relative w-60 h-60 border-2 rounded-full bg-lightMdBG splashImage" ref={scope} initial={{opacity: 0}}>
-                <Image alt="Logo" src={'/splashlogo.webp'} width={240} height={240} className="p-3" priority/>
-              </motion.div>
-            </div>
-          )
-          : */}
-          <Providers>
-            {children}
-          </Providers>
-        {/* } */}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )
