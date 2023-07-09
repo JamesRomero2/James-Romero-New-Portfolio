@@ -1,0 +1,63 @@
+[
+  {
+    "ProjectName": "Goal Setter",
+    "ProjectDesc": "Goal Setter Web App built using MERN with Redux, Tutorial by Traversy Media. Learned how to use Redux and implement it on a MERN stack.",
+    "Link": "https://learnmern-client.onrender.com",
+    "Platform": "Web",
+    "Tags": [
+      "ReactJS", "TypeScript", "Redux", "TailwindCSS", "Express", "MongoDB", "NodeJS"
+    ]
+  },
+  {
+    "ProjectName": "URL Shortening App",
+    "ProjectDesc": "URL Shortening Web App using React, TypeScript, and TailwindCSS. Designed by Frontendmentor. Implement API for URL Shortening.",
+    "Link": "https://url-shortening-api-landing-page-topaz.vercel.app/",
+    "Platform": "Web",
+    "Tags": [
+      "NextJS", "TypeScript", "Framer Motion", "TailwindCSS", "NodeJS", "Frontend Mentor", "shrtcode API"
+    ]
+  },
+  {
+    "ProjectName": "QR Code Generator",
+    "ProjectDesc": "QR Code Generator using REACT, TailwindCSS, and TypeScript. Designed by Frontendmentor. Coded and implement a Debouncer for delaying API requests.",
+    "Link": "https://qr-code-generator-eight-nu.vercel.app/",
+    "Platform": "Web",
+    "Tags": [
+      "NextJS", "TypeScript", "Framer Motion", "TailwindCSS", "NodeJS", "Frontend Mentor", "qrcode.react"
+    ]
+  },
+  {
+    "ProjectName": "Sign Up Form Component",
+    "ProjectDesc": "Sign Up Form Component using REACT, TailwindCSS, and TypeScript. Designed by Frontendmentor. Learn how to use Framer Motion and built a responsive website using TailwindCSS.",
+    "Link": "https://qr-code-generator-eight-nu.vercel.app/",
+    "Platform": "Web",
+    "Tags": [
+      "NextJS", "TypeScript", "Framer Motion", "TailwindCSS", "NodeJS", "Frontend Mentor"
+    ]
+  },
+  {
+    "ProjectName": "Number Guessing Game",
+    "ProjectDesc": "A Mobile Game made using Android Studio in Java. The app will randomly choose a number and the user will have to guess it in 10 tries",
+    "Link": "https://github.com/JamesRomero2/Number-Guessing-Game",
+    "Platform": "Mobile",
+    "Tags": ["Android Studio", "Native Android Mobile Game", "Java", "Mobile Development", "Animations"]
+  },
+  {
+    "ProjectName": "BlockEzcape",
+    "ProjectDesc": "A Math Puzzle-Based Game inspired with Sokoban. Developed a game using Godot for a Capstone Project. Recognized as the Best Thesis during 2023 Symposium at STI College Cubao.",
+    "Link": "https://bluecode.itch.io/blockezcape",
+    "Platform": "Game",
+    "Tags": [
+      "Godot", "Pixel Art", "Mathematics", "Arithmetic", "Decimals"
+    ]
+  },
+  {
+    "ProjectName": "Let There Be Light",
+    "ProjectDesc": "A Memory Platformer Game made using Godot. My first game jam experience using Godot.",
+    "Link": "https://bluecode.itch.io/let-there-be-light",
+    "Platform": "Game",
+    "Tags": [
+      "Godot", "Memory Game", "Platformer Game", "Pixel Art", "Game Jam Submissions"
+    ]
+  }
+]

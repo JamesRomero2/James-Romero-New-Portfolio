@@ -1,4 +1,5 @@
 'use client'
+import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -58,9 +59,18 @@ const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
       dirLight2.position.set( 0, 10, -50 );
       scene.add( dirLight2 );
 
+      const dirLight3 = new THREE.SpotLight( 0xffffff, 3 );
+      dirLight3.position.set( 50, 10, 0 );
+      scene.add( dirLight3 );
+
+      const dirLight4 = new THREE.SpotLight( 0xffffff, 3 );
+      dirLight4.position.set( -50, 10, 0 );
+      scene.add( dirLight4 );
+
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
       controls.target = target;
+      controls.enabled = false
       setContrls(controls)
 
       loadGLTFModel(scene, glbModelDirectory, {
@@ -88,16 +98,15 @@ const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
         } else {
           controls.update()
         }
-
         renderer.render(scene, camera)
       }
 
-            return () => {
-                cancelAnimationFrame(req);
-                renderer.dispose()
-            }
+      return () => {
+        cancelAnimationFrame(req);
+        renderer.dispose()
+      }
     }
-  }, [glbModelDirectory, initialCameraPosition, renderer, scene,target])
+  }, [glbModelDirectory, initialCameraPosition, renderer, scene, target])
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize, false)
@@ -113,15 +122,24 @@ const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
       {
         loading ? 
         (
-          <span>
-            Loading Model...
-          </span>
+          <>
+            
+          </>
         )
         :
         (
-          <div className='w-72 h-72' ref={refDiv}>
+          <motion.div className='w-72 h-72 sm:w-96 sm:h-96' ref={refDiv}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            variants={{
+              visible: { scale: 1, y : "0%" },
+              hidden: { scale: 0, y : "50%" },
+            }}
+          >
           
-          </div>
+          </motion.div>
         )
       }
     </div>

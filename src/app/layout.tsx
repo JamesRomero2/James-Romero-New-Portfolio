@@ -1,9 +1,10 @@
-'use client'
-import { AnimatePresence } from 'framer-motion'
-import { Metadata } from 'next'
-import './globals.css'
-import { Providers } from './providers'
-
+"use client"
+import { motion, useAnimate } from 'framer-motion';
+import { Metadata } from 'next';
+import Image from "next/image";
+import { useEffect, useState } from 'react';
+import './globals.css';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: "James Romero",
@@ -43,14 +44,39 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [loading, setLoading] = useState(true);
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    const animateSplashScreen = async () => {
+      await animate(scope.current, {opacity: 0},  {duration: 0.5, ease: 'easeIn'});
+      await animate(scope.current, {opacity: 1},  {duration: 1});
+      await animate(scope.current, {rotate: 45},  {duration: 0.5, ease: 'anticipate'});
+      await animate(scope.current, {scaleY: 0, rotate: -360},  {duration: 0.3, ease: 'easeIn'});
+      setLoading(false);
+    }
+
+    animateSplashScreen();
+  }, [scope, animate])
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <AnimatePresence>
+        {
+          loading ? 
+          (
+            // Splash Screen
+            <div className="w-screen h-screen bg-accent flex items-center justify-center">
+              <motion.div className="relative w-60 h-60 border-2 rounded-full bg-lightMdBG splashImage" ref={scope} initial={{opacity: 0}}>
+                <Image alt="Logo" src={'/splashlogo.webp'} width={240} height={240} className="p-3" priority/>
+              </motion.div>
+            </div>
+          )
+          :
           <Providers>
             {children}
           </Providers>
-        </AnimatePresence>
+        }
       </body>
     </html>
   )

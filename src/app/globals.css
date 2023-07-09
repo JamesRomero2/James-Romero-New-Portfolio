@@ -16,6 +16,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #26292B;
+  border-radius: 10px;
+}
 .container {
   padding: 0 16px;
 }
@@ -36,6 +46,7 @@
 }
 @media screen and (min-width: 1280px) {
   .container {
+    width: 1024px;
     padding: 0 36px;
     margin: auto;
   }
