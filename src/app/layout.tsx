@@ -1,8 +1,4 @@
-"use client"
-import { motion, useAnimate } from 'framer-motion';
 import { Metadata } from 'next';
-import Image from "next/image";
-import { useEffect, useState } from 'react';
 import './globals.css';
 import { Providers } from './providers';
 
@@ -44,25 +40,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [loading, setLoading] = useState(true);
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    const animateSplashScreen = async () => {
-      await animate(scope.current, {opacity: 0},  {duration: 0.5, ease: 'easeIn'});
-      await animate(scope.current, {opacity: 1},  {duration: 1});
-      await animate(scope.current, {rotate: 45},  {duration: 0.5, ease: 'anticipate'});
-      await animate(scope.current, {scaleY: 0, rotate: -360},  {duration: 0.3, ease: 'easeIn'});
-      setLoading(false);
-    }
-
-    animateSplashScreen();
-  }, [scope, animate])
-  
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {
+        {/* {
           loading ? 
           (
             // Splash Screen
@@ -72,11 +53,11 @@ export default function RootLayout({
               </motion.div>
             </div>
           )
-          :
+          : */}
           <Providers>
             {children}
           </Providers>
-        }
+        {/* } */}
       </body>
     </html>
   )
