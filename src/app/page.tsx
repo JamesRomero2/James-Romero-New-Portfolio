@@ -53,7 +53,6 @@ export default function Home() {
               </div>
             </ShowOnFrame>
           </div>
-          
           <div className="md:ml-10 md:flex-1">
             <ShowOnFrame>
               <p className="font-barl text-6xl font-bold block mb-24 border-b-4 pb-4 text-center md:text-justify md:text-5xl">
