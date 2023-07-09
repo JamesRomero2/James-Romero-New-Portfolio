@@ -22,23 +22,6 @@ const SampleProjects = dynamic(() => import('@/components/SampleProjects'), {
 const CircleImage = dynamic(() => import('@/components/CircleImage'))
 
 export default function Home() {
-  // const [projects, setProjects] = useState<Project[]>([]);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const fetchAllProjects = async () => {
-  //     const res = await fetch(`${server}/api/projects`);
-  //     const allProjects = await res.json();
-  //     setProjects(allProjects);
-  //     setLoading(false);
-  //   }
-  //   fetchAllProjects()
-  // }, [])
-
-  // if (loading) {
-  //   return <LoadingPage/>
-  // }
-  
   return (
     <>
       <Header/>
@@ -63,9 +46,9 @@ export default function Home() {
             {/* ImageSource = Image Directory, Image Size = [Value]rem */}
             <ShowOnFrame>
               <CircleImage ImageSource="/profile.webp" ImageSize={10}/>
-              <div className="md:block hidden">
+              <div className="md:flex hidden justify-center items-center">
                 <CallToActionButton>
-                  <Link href={'/CV_ROMERO.pdf'} target="_blank" rel="noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white">View Resume</Link>
+                  <Link href={'/cv.pdf'} target="_blank" rel="noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white block py-2 px-7">View Resume</Link>
                 </CallToActionButton>
               </div>
             </ShowOnFrame>
@@ -73,20 +56,20 @@ export default function Home() {
           
           <div className="md:ml-10 md:flex-1">
             <ShowOnFrame>
-              <p className="font-barl text-6xl font-bold block mb-10 border-b-4 pb-4 text-center md:text-justify md:text-5xl">
+              <p className="font-barl text-6xl font-bold block mb-24 border-b-4 pb-4 text-center md:text-justify md:text-5xl">
                 Hello There ! <span className="block sm:inline">👋 😃</span>
               </p>
             </ShowOnFrame>
           </div>
             <ShowOnFrame>
-              <p className="font-mont text-center leading-7 md:text-left md:ml-56 md:-mt-20">
+              <p className="font-mont text-center leading-7 md:text-left md:ml-56 md:-mt-28">
                 I am an aspiring full stack web developer based from the Philippines, eager to make my mark in the field of programming and the tech industry. Along with my positive attitude and mindset, I strive to learn more about programming because I believe in the power of continuous learning. Alongside my passion for coding, I am also a multipotentialite, which means I have diverse interests and talents that extend beyond programming.<br/><br/>
                 This versatility allows me to approach problems from different angles, bringing creativity and innovation to my work. This also allows me to adapt easily in different environments and also learn different programming languages that can built softwares in different platforms.
               </p>
             </ShowOnFrame>
-          <div className="md:hidden block">
+          <div className="md:hidden flex justify-center items-center w-full">
             <CallToActionButton>
-              <Link href={'/CV_ROMERO.pdf'} target="_blank" rel="noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white">View Resume</Link>
+              <Link href={'/cv.pdf'} target="_blank" rel="noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white px-16 md:px-40 py-2 block">View Resume</Link>
             </CallToActionButton>
           </div>
         </section>
@@ -96,11 +79,7 @@ export default function Home() {
             </h2>
           </ShowOnFrame>
           <SampleProjects/>
-          <CallToActionButton>
-            <Link href={"#"} className="font-barl font-bold text-2xl tracking-wide text-white">
-              View All Projects
-            </Link>
-          </CallToActionButton>
+          
         </section>
         <section className="contact my-10 flex flex-col">
           <ShowOnFrame>
@@ -109,9 +88,11 @@ export default function Home() {
             </h2>
           <p className="font-mont text-center text-lg sm:text-2xl">Connect with me !<br/>We can work it out soon !</p>
           </ShowOnFrame>
-          <CallToActionButton>
-            <Link href={"mailto:romerojameslabr@gmail.com"} rel="noopener noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white">Say Hello !</Link>
-          </CallToActionButton>
+          <div className="flex justify-center items-center w-full">
+            <CallToActionButton>
+              <Link href={"mailto:romerojameslabr@gmail.com"} rel="noopener noreferrer" className="font-barl font-bold text-2xl tracking-wide text-white block py-2 px-16 md:px-40">Say Hello !</Link>
+            </CallToActionButton>
+          </div>
         </section>
       </main>
       <Footer/>
