@@ -2,12 +2,19 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import projects from "../data/data.json";
 
-const SampleProjects = async ({projects}: {projects: Project[]}) => {
+const SampleProjects = () => {
+  const [proj, setProj] = useState<Project[]>([])
+  useEffect(() => {
+    setProj(projects)
+  }, [])
+  
   return (
     <ul className='flex flex-col gap-y-3 my-5 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4'>
       {
-        projects.sort(() => 0.5 - Math.random()).slice(0, 4).map((project) => {
+        proj.sort(() => 0.5 - Math.random()).slice(0, 4).map((project) => {
           return(
             <motion.li className="border-b py-3 cursor-pointer md:relative" key={project.ProjectName}
               initial="hidden"

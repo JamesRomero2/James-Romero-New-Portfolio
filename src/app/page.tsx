@@ -1,10 +1,6 @@
-"use client"
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { server } from '../config';
-import Loading from "./loading";
 
 const ModelContainer = dynamic(() => import('../components/Model'), {
   ssr: false,
@@ -13,29 +9,35 @@ const ModelContainer = dynamic(() => import('../components/Model'), {
 const SocialMedia = dynamic(() => import('@/components/SocialMediaButtons'))
 const ShowOnFrame = dynamic(() => import('@/components/AnimateVisible'))
 const CallToActionButton = dynamic(() => import('@/components/CTAButton'))
-const FloatingImages = dynamic(() => import('@/components/FloatingImages'))
+const FloatingImages = dynamic(() => import('@/components/FloatingImages'), {
+  ssr: false
+})
 const Footer = dynamic(() => import('@/components/Footer'))
-const Header = dynamic(() => import('@/components/Header'))
-const SampleProjects = dynamic(() => import('@/components/SampleProjects'))
+const Header = dynamic(() => import('@/components/Header'), {
+  ssr: false
+})
+const SampleProjects = dynamic(() => import('@/components/SampleProjects'), {
+  ssr: false
+})
 const CircleImage = dynamic(() => import('@/components/CircleImage'))
 
 export default function Home() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  // const [projects, setProjects] = useState<Project[]>([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchAllProjects = async () => {
-      const res = await fetch(`${server}/api/projects`);
-      const allProjects = await res.json();
-      setProjects(allProjects);
-      setLoading(false);
-    }
-    fetchAllProjects()
-  }, [])
+  // useEffect(() => {
+  //   const fetchAllProjects = async () => {
+  //     const res = await fetch(`${server}/api/projects`);
+  //     const allProjects = await res.json();
+  //     setProjects(allProjects);
+  //     setLoading(false);
+  //   }
+  //   fetchAllProjects()
+  // }, [])
 
-  if (loading) {
-    return <Loading/>
-  }
+  // if (loading) {
+  //   return <LoadingPage/>
+  // }
   
   return (
     <>
@@ -93,7 +95,7 @@ export default function Home() {
             <h2 className="text-center font-barl font-bold text-6xl border-b-4 pb-3">Projects ! <span className="block mt-3 sm:inline sm:mt-0">🖥️ 📱</span>
             </h2>
           </ShowOnFrame>
-          <SampleProjects projects={projects}/>
+          <SampleProjects/>
           <CallToActionButton>
             <Link href={"#"} className="font-barl font-bold text-2xl tracking-wide text-white">
               View All Projects
