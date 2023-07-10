@@ -23,6 +23,7 @@ module.exports = {
       transparent : 'transparent',
       accent: '#4732E7',
       white: '#FFFFFF',
+      green: '#4DFF5E',
     },
   },
   plugins: [],

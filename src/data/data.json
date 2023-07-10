@@ -36,6 +36,15 @@
     ]
   },
   {
+    "ProjectName": "V1 James Romero's Web Portfolio",
+    "ProjectDesc": "Version 1 of James Romero's Web Portfolio",
+    "Link": "https://jamesromero-homepage.vercel.app/",
+    "Platform": "Web",
+    "Tags": [
+      "NextJS", "JavaScript", "Cloudinary", "ThreeJS", "SASS/SCSS", "EmailJS"
+    ]
+  },
+  {
     "ProjectName": "Number Guessing Game",
     "ProjectDesc": "A Mobile Game made using Android Studio in Java. The app will randomly choose a number and the user will have to guess it in 10 tries",
     "Link": "https://github.com/JamesRomero2/Number-Guessing-Game",

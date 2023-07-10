@@ -9,7 +9,7 @@ function easeOutCircle(x: number) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
 
-const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
+const Model = () => {
   const refDiv = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState<boolean>(false)
   const [renderer, setRenderer] = useState<any>();
@@ -73,7 +73,7 @@ const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
       controls.enabled = false
       setContrls(controls)
 
-      loadGLTFModel(scene, glbModelDirectory, {
+      loadGLTFModel(scene, '/crown.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -106,7 +106,7 @@ const Model = ({glbModelDirectory}: {glbModelDirectory: string}) => {
         renderer.dispose()
       }
     }
-  }, [glbModelDirectory, initialCameraPosition, renderer, scene, target])
+  }, [initialCameraPosition, renderer, scene, target])
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize, false)
