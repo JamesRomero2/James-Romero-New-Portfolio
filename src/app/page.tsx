@@ -48,14 +48,18 @@ export default function Home() {
             </ShowOnFrame>
           </div>
           <div className="md:ml-10 md:flex-1">
-            <p className="font-barl text-6xl font-bold block mb-24 border-b-4 pb-4 text-center md:text-justify md:text-5xl">
-              Hello There ! <span className="block sm:inline">👋 😃</span>
-            </p>
+            <ShowOnFrame>
+              <p className="font-barl text-6xl font-bold block mb-24 border-b-4 pb-4 text-center md:text-justify md:text-5xl">
+                Hello There ! <span className="block sm:inline">👋 😃</span>
+              </p>
+            </ShowOnFrame>
           </div>
-          <p className="font-mont text-center leading-7 md:text-left md:ml-56 md:-mt-28">
-            I am an aspiring full stack web developer based from the Philippines, eager to make my mark in the field of programming and the tech industry. Along with my positive attitude and mindset, I strive to learn more about programming because I believe in the power of continuous learning. Alongside my passion for coding, I am also a multipotentialite, which means I have diverse interests and talents that extend beyond programming.<br/><br/>
-            This versatility allows me to approach problems from different angles, bringing creativity and innovation to my work. This also allows me to adapt easily in different environments and also learn different programming languages that can built softwares in different platforms.
-          </p>
+          <ShowOnFrame>
+            <p className="font-mont text-center leading-7 md:text-left md:ml-56 md:-mt-28">
+              I am an aspiring full stack web developer based from the Philippines, eager to make my mark in the field of programming and the tech industry. Along with my positive attitude and mindset, I strive to learn more about programming because I believe in the power of continuous learning. Alongside my passion for coding, I am also a multipotentialite, which means I have diverse interests and talents that extend beyond programming.<br/><br/>
+              This versatility allows me to approach problems from different angles, bringing creativity and innovation to my work. This also allows me to adapt easily in different environments and also learn different programming languages that can built softwares in different platforms.
+            </p>
+          </ShowOnFrame>
           <div className="md:hidden flex justify-center items-center w-full">
             <CallToActionButton>
               <Link href={'/cv.pdf'} target="_blank" rel="noopener noreferrer" locale={false} className="font-barl font-bold text-2xl tracking-wide text-white px-16 md:px-40 py-2 block">View Resume</Link>
