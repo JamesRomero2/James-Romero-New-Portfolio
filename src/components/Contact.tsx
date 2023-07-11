@@ -30,7 +30,7 @@ const Contact = () => {
         </div>
         }
         <CallToActionButton>
-          <button className="text-xl text-center font-barl cursor-pointer px-6 md:px-20 py-2" onClick={showCopied}>business.jamesromero@gmail.com</button>
+          <button className="text-xl text-center font-barl cursor-pointer px-6 md:px-20 py-2 text-white" onClick={showCopied}>business.jamesromero@gmail.com</button>
         </CallToActionButton>
       </div>
     </>
