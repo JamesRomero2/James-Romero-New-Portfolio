@@ -1,3 +1,4 @@
+![Portfolio Cover](/public/twitterOG.png)
 # V2 Personal Portfolio
 
 This project is for my personal portfolio containing how I describe myself, about me, the project I work on and how to contact me.
